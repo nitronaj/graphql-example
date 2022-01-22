@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 'redshow',
+    id: 'redshoe',
     description: 'Red shoe',
     price: 42.12,
   },
@@ -15,6 +15,18 @@ function getAllProducts() {
   return products;
 }
 
+function getProductsByPrice(min, max) {
+  return products.filter(
+    (product) => product.price >= min && product.price <= max
+  );
+}
+
+function getProductsById(id) {
+  return products.filter((product) => product.id === id);
+}
+
 module.exports = {
   getAllProducts,
+  getProductsByPrice,
+  getProductsById,
 };
