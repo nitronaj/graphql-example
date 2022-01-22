@@ -21,12 +21,12 @@ function getProductsByPrice(min, max) {
   );
 }
 
-function getProductsById(id) {
-  return products.filter((product) => product.id === id);
+function getProductById(id) {
+  return products.find((product) => product.id === id);
 }
 
 module.exports = {
   getAllProducts,
   getProductsByPrice,
-  getProductsById,
+  getProductById,
 };
